@@ -92,6 +92,20 @@ class Product extends CoreModel {
         return $results;
     }
 
+    public function find3ProductsHomepage()
+    {
+        $pdo = Database::getPDO();
+        $sql = '
+            SELECT *
+            FROM product
+            LIMIT 3
+        ';
+        $pdoStatement = $pdo->query($sql);
+        $product = $pdoStatement->fetchAll(PDO::FETCH_CLASS, 'App\Models\Product');
+        
+        return $product;
+    }
+
     /**
      * Get the value of name
      *
@@ -271,4 +285,6 @@ class Product extends CoreModel {
     {
         $this->type_id = $type_id;
     }
+
+    
 }

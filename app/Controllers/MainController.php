@@ -18,7 +18,13 @@ class MainController extends CoreController {
     {
     $categoryHomeModel = new Category();
     $categoryHomeList = $categoryHomeModel->find3CategoriesHomepage();
-    $dataToDisplay = ['categoryHomeList' => $categoryHomeList];
+    $productHomeModel = new Product();
+    $productHomeList = $productHomeModel->find3ProductsHomepage();
+
+    $dataToDisplay = [
+        'categoryHomeList' => $categoryHomeList,
+        'productHomeList' => $productHomeList
+    ];
     $this->show('main/home', $dataToDisplay);
     }
 

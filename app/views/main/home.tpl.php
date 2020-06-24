@@ -17,9 +17,10 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                <?php foreach ($categoryHomeList as $singleCategory): ?>
                                 <tr>
-                                    <th scope="row">1</th>
-                                    <td>Détente</td>
+                                    <th scope="row"><?= $singleCategory->getId()?></th>
+                                    <td><?=$singleCategory->getName()?></td>
                                     <td class="text-right">
                                         <a href="" class="btn btn-sm btn-warning">
                                             <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
@@ -37,46 +38,7 @@
                                         </div>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td>Au travail</td>
-                                    <td class="text-right">
-                                        <a href="" class="btn btn-sm btn-warning">
-                                            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                                        </a>
-                                        <!-- Example single danger button -->
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-sm btn-danger dropdown-toggle"
-                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <i class="fa fa-trash-o" aria-hidden="true"></i>
-                                            </button>
-                                            <div class="dropdown-menu">
-                                                <a class="dropdown-item" href="#">Oui, je veux supprimer</a>
-                                                <a class="dropdown-item" href="#" data-toggle="dropdown">Oups !</a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">3</th>
-                                    <td>Cérémonie</td>
-                                    <td class="text-right">
-                                        <a href="" class="btn btn-sm btn-warning">
-                                            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                                        </a>
-                                        <!-- Example single danger button -->
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-sm btn-danger dropdown-toggle"
-                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <i class="fa fa-trash-o" aria-hidden="true"></i>
-                                            </button>
-                                            <div class="dropdown-menu">
-                                                <a class="dropdown-item" href="#">Oui, je veux supprimer</a>
-                                                <a class="dropdown-item" href="#" data-toggle="dropdown">Oups !</a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
+                                <?php endforeach ; ?>
                             </tbody>
                         </table>
                         <a href="<?= $router->generate('category') ?>" class="btn btn-block btn-success">Voir plus</a>
@@ -96,9 +58,10 @@
                                 </tr>
                             </thead>
                             <tbody>
+                            <?php foreach ($productHomeList as $singleProduct): ?>
                                 <tr>
-                                    <th scope="row">1</th>
-                                    <td>Kissing</td>
+                                    <th scope="row"><?= $singleProduct->getId()?></th>
+                                    <td><?=$singleProduct->getName()?></td>
                                     <td class="text-right">
                                         <a href="" class="btn btn-sm btn-warning">
                                             <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
@@ -116,46 +79,7 @@
                                         </div>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td>Pink Lady</td>
-                                    <td class="text-right">
-                                        <a href="" class="btn btn-sm btn-warning">
-                                            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                                        </a>
-                                        <!-- Example single danger button -->
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-sm btn-danger dropdown-toggle"
-                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <i class="fa fa-trash-o" aria-hidden="true"></i>
-                                            </button>
-                                            <div class="dropdown-menu">
-                                                <a class="dropdown-item" href="#">Oui, je veux supprimer</a>
-                                                <a class="dropdown-item" href="#" data-toggle="dropdown">Oups !</a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">3</th>
-                                    <td>Panda</td>
-                                    <td class="text-right">
-                                        <a href="" class="btn btn-sm btn-warning">
-                                            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                                        </a>
-                                        <!-- Example single danger button -->
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-sm btn-danger dropdown-toggle"
-                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <i class="fa fa-trash-o" aria-hidden="true"></i>
-                                            </button>
-                                            <div class="dropdown-menu">
-                                                <a class="dropdown-item" href="#">Oui, je veux supprimer</a>
-                                                <a class="dropdown-item" href="#" data-toggle="dropdown">Oups !</a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
+                                <?php endforeach ; ?>
                             </tbody>
                         </table>
                         <a href="<?= $router->generate('product') ?>" class="btn btn-block btn-success">Voir plus</a>
