@@ -88,7 +88,7 @@ class Product extends CoreModel {
         $sql = 'SELECT * FROM `product`';
         $pdoStatement = $pdo->query($sql);
         $results = $pdoStatement->fetchAll(PDO::FETCH_CLASS, 'App\Models\Product');
-        
+        //dd($results);
         return $results;
     }
 

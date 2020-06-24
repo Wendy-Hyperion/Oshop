@@ -127,7 +127,7 @@ class Category extends CoreModel {
         $sql = 'SELECT * FROM `category`';
         $pdoStatement = $pdo->query($sql);
         $results = $pdoStatement->fetchAll(PDO::FETCH_CLASS, 'App\Models\Category');
-        
+        //dd($results);
         return $results;
     }
 
@@ -144,6 +144,20 @@ class Category extends CoreModel {
             FROM category
             WHERE home_order > 0
             ORDER BY home_order ASC
+        ';
+        $pdoStatement = $pdo->query($sql);
+        $categories = $pdoStatement->fetchAll(PDO::FETCH_CLASS, 'App\Models\Category');
+        
+        return $categories;
+    }
+
+    public function find3CategoriesHomepage()
+    {
+        $pdo = Database::getPDO();
+        $sql = '
+            SELECT *
+            FROM category
+            LIMIT 3
         ';
         $pdoStatement = $pdo->query($sql);
         $categories = $pdoStatement->fetchAll(PDO::FETCH_CLASS, 'App\Models\Category');

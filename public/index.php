@@ -50,6 +50,44 @@ $router->map(
     ],
     'main-home'
 );
+$router->map(
+    'GET',
+    '/category',
+    [
+        'method' => 'category',
+        'controller' => '\App\Controllers\MainController'
+    ],
+    'category'
+);
+$router->map(
+    'GET',
+    '/product',
+    [
+        'method' => 'product',
+        'controller' => '\App\Controllers\MainController'
+    ],
+    'product'
+);
+
+$router->map(
+    'GET',
+    '/product-add',
+    [
+        'method' => 'productAdd',
+        'controller' => '\App\Controllers\MainController'
+    ],
+    'product-add'
+);
+
+$router->map(
+    'GET',
+    '/category-add',
+    [
+        'method' => 'categoryAdd',
+        'controller' => '\App\Controllers\MainController'
+    ],
+    'category-add'
+);
 
 
 /* -------------
